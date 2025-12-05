@@ -132,30 +132,3 @@ Dans `php.ini`, désactiver les wrappers non nécessaires :
 allow_url_fopen = Off
 allow_url_include = Off
 ```
-
-### 3. Utilisation de basename()
-
-Empêcher les directory traversal :
-```php
-$page = basename($_GET['inc']);
-include($page);
-```
-
-### 4. Stockage sécurisé des credentials
-
-- Ne JAMAIS stocker les mots de passe en clair
-- Utiliser des variables d'environnement ou des fichiers de configuration hors du webroot
-- Hasher les mots de passe avec `password_hash()`
-
-### 5. Principle of Least Privilege
-
-- Stocker les fichiers sensibles (config.php) en dehors du répertoire web accessible
-- Utiliser des chemins absolus pour les includes
-- Configurer les permissions de fichiers correctement (chmod)
-
-### 6. Web Application Firewall (WAF)
-
-Détecter et bloquer les tentatives d'exploitation de LFI via des patterns suspects dans les URLs :
-- `php://filter`
-- `file://`
-- `../` (directory traversal)
