@@ -6,7 +6,7 @@ https://www.root-me.org/fr/Challenges/Web-Serveur/Injection-de-commande-Contourn
 
 Le formulaire permet de pinger une adresse IP. Les tentatives d'injection via le navigateur avec des séparateurs classiques (`;`, `|`, `&`) ou des sauts de ligne échouent ("Syntax Error") car les caractères sont soit filtrés, soit mal encodés par le navigateur (URL encoding).
 
-![Test d'injection navigateur](1.png)
+![Test d'injection navigateur](1.PNG)
 
 ---
 
